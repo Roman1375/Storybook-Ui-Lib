@@ -1,0 +1,65 @@
+* {
+    --primary-input-color: #e5d7ff;
+    --focus-border-color: #7c96ff;
+    --light-hover-bg: rgba(124, 150, 255, 0.1);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.label {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-input-color);
+}
+
+.input {
+    width: 280px;
+    padding: 10px 36px 10px 12px;
+    border: 1px solid var(--primary-input-color);
+    background: transparent;
+    color: var(--primary-input-color);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    outline: none;
+    transition: border-color 0.15s ease;
+}
+
+.input:focus {
+    border-color: var(--focus-border-color);
+}
+
+.inputButtons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.iconBtn {
+    display: grid;
+    place-items: center;
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.iconBtn:hover {
+    background: var(--light-hover-bg);
+}
+
+.iconBtn:hover svg {
+    stroke: var(--focus-border-color);
+}
