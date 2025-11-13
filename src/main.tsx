@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
 import { Input } from './components/input';
+import { Toast } from './components/toast';
+import './index.css';
 
 const root = document.getElementById('root');
 
@@ -10,7 +11,14 @@ if (root) {
     <StrictMode>
       <main>
         <h1 className="title">React Storybook Component Library 🦅</h1>
-        <Input label="Username" type="password" placeholder="Enter your username" clearable />
+        <Input label="Input Example" type="password" placeholder="Type something" clearable />
+        <Toast
+          title="Hello there!"
+          message="I`m a toast example!"
+          type="info"
+          closable={true}
+          duration={5000}
+        />
       </main>
     </StrictMode>,
   );

@@ -2,15 +2,15 @@
     --primary-input-color: #e5d7ff;
     --focus-border-color: #7c96ff;
     --light-hover-bg: rgba(124, 150, 255, 0.1);
+    --error-color: #ff6b6b;
 }
 
-.wrapper {
+.inputWrapper {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
 
 .label {
     display: block;
@@ -30,6 +30,11 @@
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     outline: none;
     transition: border-color 0.15s ease;
+}
+
+.input:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 .input:focus {
@@ -60,6 +65,39 @@
     background: var(--light-hover-bg);
 }
 
+.inputError {
+    border-color: var(--error-color);
+}
+
+.iconBtn svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--primary-input-color);
+    transition: stroke 0.15s ease;
+}
+
 .iconBtn:hover svg {
     stroke: var(--focus-border-color);
+}
+
+.iconBtnError svg {
+    stroke: var(--error-color);
+}
+
+.errorState {
+    color: var(--error-color);
+    border-color: var(--error-color);
+}
+
+.errorMessage {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--error-color);
+}
+
+.hintMessage {
+    margin-top: 4px;
+    font-size: 12px;
+    color: var(--primary-input-color);
+    opacity: 0.7;
 }

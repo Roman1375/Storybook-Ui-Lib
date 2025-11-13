@@ -8,6 +8,13 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  argTypes: {
+    type: { control: 'select', options: ['text', 'password', 'number', 'email', 'tel'] },
+    label: { control: 'text' },
+    placeholder: { control: 'text' },
+    clearable: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+  },
   args: {
     placeholder: 'Type something here…',
   },
@@ -16,18 +23,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Text: Story = {};
 
 export const WithLabel: Story = {
   args: { label: 'Email' },
 };
 
-export const PasswordInput: Story = {
-  args: { label: 'Password', type: 'password' },
+export const PasswordWithToggle: Story = {
+  args: {
+    label: 'Password',
+    type: 'password',
+    placeholder: 'Enter your password',
+    clearable: true,
+  },
 };
 
-export const ClearableInput: Story = {
-  args: { label: 'Search', clearable: true },
+export const Number: Story = {
+  args: { label: 'Number', clearable: true, type: 'number' },
 };
 
 export const Disabled: Story = {
