@@ -16,7 +16,7 @@ It demonstrates three reusable components:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/storybook-ui-lib.git
+git clone https://github.com/Roman1375/Storybook-Ui-Lib.git
 cd storybook-ui-lib
 
 # Install dependencies
