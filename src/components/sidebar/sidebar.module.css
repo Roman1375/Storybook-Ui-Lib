@@ -1,0 +1,109 @@
+* {
+    --primary-menu-color: #eee3ff;
+    --hover-link-color: #d1b9ff;
+}
+
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+}
+
+.panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 320px;
+    background: #2d2d2d;
+    color: var(--primary-menu-color);
+    box-shadow: -12px 0 32px rgba(0, 0, 0, 0.27);
+    z-index: 901;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    font-weight: 600;
+    font-size: 20px;
+    border-bottom: 1px solid #d1b9ff;
+}
+
+.list {
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+}
+
+.item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 16px;
+    border: 0;
+    color: var(--primary-menu-color);
+    background: none;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: rgba(107, 107, 107, 0.22);
+}
+
+.children {
+    padding-left: 12px;
+}
+
+.chev {
+    margin-left: auto;
+    opacity: 0.6;
+    transition: all 0.2s ease-in-out;
+}
+
+.chevOpen {
+    transform: rotate(90deg);
+    opacity: 1;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    padding: 10px 16px;
+}
+
+.link:hover {
+    color: var(--hover-link-color);
+}
+
+.closeBtn {
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    height: fit-content;
+    color: #ababab;
+}
+
+.closeBtn svg{
+    width: 20px;
+    height: 20px;
+}
+
+.closeBtn:hover {
+    color: #d0d0d0;
+}
